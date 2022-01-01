@@ -8,7 +8,9 @@
 import SwiftUI
 
 @main
+
 struct SamacharApp: App {
+   
     var body: some Scene {
         WindowGroup {
             ContentView()

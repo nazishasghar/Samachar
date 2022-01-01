@@ -6,11 +6,17 @@
 //
 
 import SwiftUI
-
 struct ContentView: View {
+    @Namespace var animation
+    @State private var show = false
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        TabView{
+        HeadlineView(show: $show, animation:animation)
+            .tabItem { Image(systemName: "newspaper.fill") }
+            
+        SearchNewsView()
+                .tabItem { Image(systemName: "magnifyingglass") }
+        }
     }
 }
 
